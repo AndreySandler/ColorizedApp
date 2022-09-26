@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet var redColorSlider: UISlider!
     @IBOutlet var greenColorSlider: UISlider!
     @IBOutlet var blueColorSlider: UISlider!
+    
     @IBOutlet var mainView: UIView!
+    
     @IBOutlet var redValueLabel: UILabel!
     @IBOutlet var greenValueLabel: UILabel!
     @IBOutlet var blueValueLabel: UILabel!
