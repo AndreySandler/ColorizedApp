@@ -19,7 +19,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHb-7n-jyX">
                                 <rect key="frame" x="16" y="20" width="288" height="166"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="166" id="G7Q-bM-K7B"/>
                                 </constraints>
@@ -77,21 +76,21 @@
                                         <rect key="frame" x="-2" y="0.0" width="168" height="31"/>
                                         <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                         <connections>
-                                            <action selector="slidersAction" destination="BYZ-38-t0r" eventType="valueChanged" id="7K6-kt-LQs"/>
+                                            <action selector="slidersAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="eyb-nb-kjd"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rch-L8-0Ii">
                                         <rect key="frame" x="-2" y="40" width="168" height="31"/>
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                         <connections>
-                                            <action selector="slidersAction" destination="BYZ-38-t0r" eventType="valueChanged" id="GNN-4B-rjk"/>
+                                            <action selector="slidersAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="qeB-0u-ZfM"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uMa-9T-Io0">
                                         <rect key="frame" x="-2" y="80" width="168" height="31"/>
                                         <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                         <connections>
-                                            <action selector="slidersAction" destination="BYZ-38-t0r" eventType="valueChanged" id="A4a-bE-fic"/>
+                                            <action selector="slidersAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ofh-xY-ObJ"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -128,9 +127,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

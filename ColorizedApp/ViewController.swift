@@ -23,14 +23,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView.layer.cornerRadius = 20
+        setupMainView()
+        setupValue()
     }
     
     // MARK: - IB Actions
-    @IBAction func slidersAction() {
-        redValueLabel.text = roundingValue(of: redColorSlider).formatted()
-        greenValueLabel.text = roundingValue(of: greenColorSlider).formatted()
-        blueValueLabel.text = roundingValue(of: blueColorSlider).formatted()
+    @IBAction func slidersAction(_ sender: UISlider) {
         setupMainView()
+        
+        switch sender {
+        case redColorSlider:
+            redValueLabel.text = string(from: redColorSlider)
+        case greenColorSlider:
+            greenValueLabel.text = string(from: greenColorSlider)
+        default:
+            blueValueLabel.text = string(from: blueColorSlider)
+        }
     }
     
     // MARK: - Private methods
@@ -43,7 +51,13 @@ class ViewController: UIViewController {
         )
     }
     
-    private func roundingValue(of slider: UISlider) -> Float {
-        round(slider.value * 100) / 100
+    private func setupValue() {
+        redValueLabel.text = string(from: redColorSlider)
+        greenValueLabel.text = string(from: greenColorSlider)
+        blueValueLabel.text = string(from: blueColorSlider)
+    }
+    
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
     }
 }
