@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		838B6E9328E05EC300D07606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B6E9228E05EC300D07606 /* AppDelegate.swift */; };
 		838B6E9528E05EC300D07606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B6E9428E05EC300D07606 /* SceneDelegate.swift */; };
-		838B6E9728E05EC300D07606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B6E9628E05EC300D07606 /* ViewController.swift */; };
+		838B6E9728E05EC300D07606 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B6E9628E05EC300D07606 /* SettingsViewController.swift */; };
 		838B6E9A28E05EC300D07606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838B6E9828E05EC300D07606 /* Main.storyboard */; };
 		838B6E9C28E05EC300D07606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838B6E9B28E05EC300D07606 /* Assets.xcassets */; };
 		838B6E9F28E05EC300D07606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838B6E9D28E05EC300D07606 /* LaunchScreen.storyboard */; };
+		83906CD428F5E9EF00A1E479 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83906CD328F5E9EF00A1E479 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		838B6E8F28E05EC300D07606 /* ColorizedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838B6E9228E05EC300D07606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838B6E9428E05EC300D07606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		838B6E9628E05EC300D07606 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		838B6E9628E05EC300D07606 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		838B6E9928E05EC300D07606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		838B6E9B28E05EC300D07606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		838B6E9E28E05EC300D07606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		838B6EA028E05EC300D07606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83906CD328F5E9EF00A1E479 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		838B6E9128E05EC300D07606 /* ColorizedApp */ = {
 			isa = PBXGroup;
 			children = (
-				838B6E9228E05EC300D07606 /* AppDelegate.swift */,
-				838B6E9428E05EC300D07606 /* SceneDelegate.swift */,
-				838B6E9628E05EC300D07606 /* ViewController.swift */,
-				838B6E9828E05EC300D07606 /* Main.storyboard */,
+				83906CD228F5D46500A1E479 /* ViewControllers */,
+				83906CD028F5D45200A1E479 /* Config */,
+				83906CD128F5D45B00A1E479 /* Storyboards */,
 				838B6E9B28E05EC300D07606 /* Assets.xcassets */,
-				838B6E9D28E05EC300D07606 /* LaunchScreen.storyboard */,
-				838B6EA028E05EC300D07606 /* Info.plist */,
 			);
 			path = ColorizedApp;
+			sourceTree = "<group>";
+		};
+		83906CD028F5D45200A1E479 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				838B6E9228E05EC300D07606 /* AppDelegate.swift */,
+				838B6E9428E05EC300D07606 /* SceneDelegate.swift */,
+				838B6EA028E05EC300D07606 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		83906CD128F5D45B00A1E479 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				838B6E9828E05EC300D07606 /* Main.storyboard */,
+				838B6E9D28E05EC300D07606 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		83906CD228F5D46500A1E479 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				83906CD328F5E9EF00A1E479 /* MainViewController.swift */,
+				838B6E9628E05EC300D07606 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				838B6E9728E05EC300D07606 /* ViewController.swift in Sources */,
+				838B6E9728E05EC300D07606 /* SettingsViewController.swift in Sources */,
 				838B6E9328E05EC300D07606 /* AppDelegate.swift in Sources */,
 				838B6E9528E05EC300D07606 /* SceneDelegate.swift in Sources */,
+				83906CD428F5E9EF00A1E479 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,10 +314,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = J572FQ3494;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorizedApp/Info.plist;
+				INFOPLIST_FILE = ColorizedApp/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,7 +329,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreySandler.ColorizedApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -319,10 +347,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = J572FQ3494;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorizedApp/Info.plist;
+				INFOPLIST_FILE = ColorizedApp/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +362,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreySandler.ColorizedApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

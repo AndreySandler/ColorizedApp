@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var redColorSlider: UISlider!
@@ -20,11 +20,16 @@ class ViewController: UIViewController {
     @IBOutlet var greenValueLabel: UILabel!
     @IBOutlet var blueValueLabel: UILabel!
     
+    // MARK: - Public Properties
+    var mainViewColor: UIColor!
+    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mainView.layer.cornerRadius = 20
-        setupMainView()
         setupValue()
+        setupMainView()
     }
     
     // MARK: - IB Actions
@@ -52,6 +57,10 @@ class ViewController: UIViewController {
     }
     
     private func setupValue() {
+        redColorSlider.value = Float(mainViewColor.red)
+        blueColorSlider.value = Float(mainViewColor.blue)
+        greenColorSlider.value = Float(mainViewColor.green)
+        
         redValueLabel.text = string(from: redColorSlider)
         greenValueLabel.text = string(from: greenColorSlider)
         blueValueLabel.text = string(from: blueColorSlider)
@@ -59,5 +68,20 @@ class ViewController: UIViewController {
     
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
+    }
+}
+
+// MARK: - Get color from MainViewController
+extension UIColor {
+    var red: CGFloat {
+        CIColor(color: self).red
+    }
+
+    var blue: CGFloat {
+        CIColor(color: self).blue
+    }
+    
+    var green: CGFloat {
+        CIColor(color: self).green
     }
 }
