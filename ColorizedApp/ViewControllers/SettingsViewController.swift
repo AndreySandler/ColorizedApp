@@ -81,7 +81,7 @@ extension UIColor {
     var red: CGFloat {
         CIColor(color: self).red
     }
-
+    
     var blue: CGFloat {
         CIColor(color: self).blue
     }
