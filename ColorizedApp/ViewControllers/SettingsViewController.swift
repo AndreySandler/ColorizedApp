@@ -22,6 +22,7 @@ class SettingsViewController: UIViewController {
     
     // MARK: - Public Properties
     var mainViewColor: UIColor!
+    var delegate: SettingsViewControllerDelegate!
     
     // MARK: - Override Methods
     override func viewDidLoad() {
@@ -46,6 +47,10 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    @IBAction func doneButtonDidTapped() {
+        dismiss(animated: true)
+        delegate.getColor(mainView.backgroundColor ?? .white)
+    }
     // MARK: - Private methods
     private func setupMainView() {
         mainView.backgroundColor = UIColor(
@@ -71,7 +76,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
-// MARK: - Get color from MainViewController
+// MARK: - Get UIColor RGB
 extension UIColor {
     var red: CGFloat {
         CIColor(color: self).red
